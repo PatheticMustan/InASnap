@@ -27,7 +27,10 @@ public class InputDisplay : InputReciever
     public IEnumerator SpawnIcon(int id) {
         GameObject obj = iconPrefab.GetObject();
         //obj.transform.parent = iconParent;
+
         obj.transform.localScale = Vector3.one;
+        obj.transform.SetAsLastSibling();
+
         obj.GetComponent<Image>().sprite = inputIcons[id];
 
         yield return new WaitForSeconds(3f);
