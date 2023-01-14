@@ -1,5 +1,5 @@
 {
-    "name": "InputMaster",
+    "name": "InputControls",
     "maps": [
         {
             "name": "Player",
@@ -57,7 +57,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "XAxis",
+                    "name": "Dir",
                     "id": "c01999f0-40e1-4d7c-894b-082305af86a9",
                     "path": "2DVector",
                     "interactions": "",
