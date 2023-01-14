@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 
 public class InputReciever : MonoBehaviour
 {
-    [SerializeField] public InputController controls;
+    [SerializeField] protected InputController controls;
 
     public Queue<InputID> inputQueue { protected get; set; }
     protected float timeBetweenActions;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         controls = new InputController();
 
@@ -40,15 +40,15 @@ public class InputReciever : MonoBehaviour
         float d = Mathf.Atan2(dir.y, dir.x) * 1.27323f;
 
         //Convert to proper enum value
-        InputAction((InputID)(Mathf.Round(d) + (d >= 0 ? 1 : 0)));
+        InputAction((InputID)(Mathf.Round(d) + (d >= 0 ? 1 : 9)));
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         controls.Enable();
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         controls.Disable();
     }
@@ -57,14 +57,14 @@ public class InputReciever : MonoBehaviour
 public enum InputID
 {
     N = 0,
-    L = 1,
-    LU = 2,
+    R = 1,
+    RU = 2,
     U = 3,
-    RU = 4,
-    R = 5,
-    RD = -3,
-    D = -2,
-    LD = -1,
+    LU = 4,
+    L = 5,
+    LD = 6,
+    D = 7,
+    RD = 8,
 
     A = 9,
     B = 10
