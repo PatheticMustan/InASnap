@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputReciever : MonoBehaviour
 {
-    protected InputMaster controls;
+    protected InputControls controls;
 
     private void Awake()
     {
