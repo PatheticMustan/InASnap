@@ -5,14 +5,15 @@ using UnityEngine.InputSystem;
 
 public class InputReciever : MonoBehaviour
 {
-    [SerializeField] protected InputController controls;
-    //[SerializeField] protected ComboDictionary combos;
+    [SerializeField] public InputController controls;
 
     public Queue<InputID> inputQueue { protected get; set; }
     protected float timeBetweenActions;
 
     private void Awake()
     {
+        controls = new InputController();
+
         controls.Player.APress.performed += _ => APress();
         controls.Player.BPress.performed += _ => BPress();
         controls.Player.Direction.performed += dir => Direction(dir.ReadValue<Vector2>());
@@ -35,7 +36,11 @@ public class InputReciever : MonoBehaviour
 
     protected virtual void Direction(Vector2 dir)
     {
-        InputAction((InputID)(Mathf.Round(Mathf.Atan2(dir.y, dir.x) / 0.7853f) + 1));
+        //Convert to angles of 45 degree intervals
+        float d = Mathf.Atan2(dir.y, dir.x) * 1.27323f;
+
+        //Convert to proper enum value
+        InputAction((InputID)(Mathf.Round(d) + (d >= 0 ? 1 : 0)));
     }
 
     private void OnEnable()
@@ -57,9 +62,10 @@ public enum InputID
     U = 3,
     RU = 4,
     R = 5,
-    RD = 6,
-    D = 7,
-    LD = 8,
+    RD = -3,
+    D = -2,
+    LD = -1,
+
     A = 9,
     B = 10
 }

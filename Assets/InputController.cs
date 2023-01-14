@@ -25,12 +25,12 @@ public partial class @InputController : IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""30e0c5d4-7379-454e-8e8f-85179966fb29"",
+            ""id"": ""bf266c37-3a7c-4578-95b9-f59917dfe09f"",
             ""actions"": [
                 {
                     ""name"": ""APress"",
                     ""type"": ""Button"",
-                    ""id"": ""99d7c6dc-f8b2-41d1-ae98-b10c78ce1aed"",
+                    ""id"": ""b6db7f0e-a4a3-492d-94c1-7e0e8e343d85"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,7 +39,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""BPress"",
                     ""type"": ""Button"",
-                    ""id"": ""6eca99d1-5090-402b-8bc7-84d777dd0a47"",
+                    ""id"": ""db6a507a-6119-4cb4-b30c-827f54cc1177"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,7 +48,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Direction"",
                     ""type"": ""Value"",
-                    ""id"": ""4a457649-ba74-4181-946f-8b1306883607"",
+                    ""id"": ""ecb18dab-cc9d-4274-ad3a-25337954b435"",
                     ""expectedControlType"": ""Dpad"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -58,7 +58,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""a244f14e-19c9-4e72-b877-acc322965aff"",
+                    ""id"": ""af59e108-0297-4e84-9cdb-a26ec6be1a19"",
                     ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -69,7 +69,7 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""94890cca-6f51-4d1f-939b-ba6b62bdedcd"",
+                    ""id"": ""1b6b64e0-d386-4a8d-9b5e-3b88d678dce5"",
                     ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -80,18 +80,18 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Dir"",
-                    ""id"": ""c01999f0-40e1-4d7c-894b-082305af86a9"",
+                    ""id"": ""4e6cb025-7d9f-414f-9702-5722aacb76a5"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard"",
+                    ""groups"": """",
                     ""action"": ""Direction"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Up"",
-                    ""id"": ""94804714-0eb2-404a-8d10-80fda39490ce"",
+                    ""name"": ""up"",
+                    ""id"": ""924be435-c58c-4ab9-a001-053571a25040"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -101,8 +101,8 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Down"",
-                    ""id"": ""8dcd8d73-ba3c-41bd-9d07-e1c3779e065f"",
+                    ""name"": ""down"",
+                    ""id"": ""266f7766-f4a1-4b5e-8c54-c96acceb0c13"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -112,8 +112,8 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Left"",
-                    ""id"": ""9e75a0b7-a7bc-4455-bf47-e6d0cec3c4d6"",
+                    ""name"": ""left"",
+                    ""id"": ""7aafb97d-8ded-4f17-8dd8-acde7c4e3ae8"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -123,8 +123,8 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Right"",
-                    ""id"": ""2001810b-9b9a-4965-b3fd-7c1b42bc4b78"",
+                    ""name"": ""right"",
+                    ""id"": ""e62d2a2d-21c0-4bd8-b3d4-8b4befadaf33"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -149,15 +149,9 @@ public partial class @InputController : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Gamepad"",
-            ""bindingGroup"": ""Gamepad"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                }
-            ]
+            ""name"": ""Joystick"",
+            ""bindingGroup"": ""Joystick"",
+            ""devices"": []
         }
     ]
 }");
@@ -279,13 +273,13 @@ public partial class @InputController : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_KeyboardSchemeIndex];
         }
     }
-    private int m_GamepadSchemeIndex = -1;
-    public InputControlScheme GamepadScheme
+    private int m_JoystickSchemeIndex = -1;
+    public InputControlScheme JoystickScheme
     {
         get
         {
-            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
-            return asset.controlSchemes[m_GamepadSchemeIndex];
+            if (m_JoystickSchemeIndex == -1) m_JoystickSchemeIndex = asset.FindControlSchemeIndex("Joystick");
+            return asset.controlSchemes[m_JoystickSchemeIndex];
         }
     }
     public interface IPlayerActions
