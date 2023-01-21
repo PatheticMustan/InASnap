@@ -12,4 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d7b3853208fb8439da9fa7e62fc567, type: 3}
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
-  characters: []
+  characters:
+  - {fileID: 11400000, guid: d629df9c6dda0654392d8d496aa3efad, type: 2}
+  - {fileID: 11400000, guid: 7cbd96d9e7fbc53499487faddb75a549, type: 2}
+  dialogue:
+  - characterID: 0
+    emote: 0
+    text: What is the meaning of phantasmagorical?
+    tickSpeed: 0.01
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 1
+    emote: 2
+    text: 'It means that you are alive!!!!!!
+
+      WOO hoo HWOo
+
+      yippeeeeeeeee'
+    tickSpeed: 0.01
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 0
+    emote: 5
+    text: 'You surprise me john
+
+      silly moose'
+    tickSpeed: 0.3
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 0
+    emote: 1
+    text: You remind me of the time I was lucid dreaming
+    tickSpeed: 0.01
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 0
+    emote: 3
+    text: Oh no
+    tickSpeed: 0.1
+    hasMaxTime: 1
+    maxTime: 0.4
+  - characterID: 1
+    emote: 3
+    text: 'Cap it '
+    tickSpeed: 0.01
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 0
+    emote: 3
+    text: okay good bye
+    tickSpeed: 0.01
+    hasMaxTime: 0
+    maxTime: 0

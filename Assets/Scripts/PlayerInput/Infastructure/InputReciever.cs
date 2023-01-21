@@ -21,7 +21,7 @@ public class InputReciever : MonoBehaviour
 
     protected virtual void InputAction(InputID inputID)
     {
-        Debug.Log(inputID);
+        //Debug.Log(inputID);
     }
 
     protected virtual void APress()

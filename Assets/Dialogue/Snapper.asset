@@ -16,4 +16,13 @@ MonoBehaviour:
   color:
     serializedVersion: 2
     rgba: 6711039
-  textBlip: {fileID: 0}
+  characterEmotionSprites:
+  - emote: 0
+    image: {fileID: 21300000, guid: 0323487f32a0def4cbbaf0f9263d0916, type: 3}
+  - emote: 1
+    image: {fileID: 21300000, guid: 2c432a8cbdc5193428cf84a101c79a78, type: 3}
+  - emote: 3
+    image: {fileID: 21300000, guid: dfb08de317ad1374982ac729a680ffaf, type: 3}
+  - emote: 5
+    image: {fileID: 21300000, guid: 3a259a57ec73f2444b0ef90065eaa7ed, type: 3}
+  textBlip: {fileID: 8300000, guid: cdb83ab370939da43962f1371fd23753, type: 3}

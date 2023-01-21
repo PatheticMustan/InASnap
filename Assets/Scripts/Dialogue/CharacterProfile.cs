@@ -38,8 +38,11 @@ public class CharacterEmotion {
 public enum Emotion {
     Neutral,
     Happy,
+    Esctatic,
     Sad,
+    Depressed,
     Angry,
+    Enraged,
     Worried,
     Loaf,
     WOE
