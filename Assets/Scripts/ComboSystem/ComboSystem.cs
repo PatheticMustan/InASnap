@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ComboSystem : MonoBehaviour {
-    public ComboDictionary comboDictionary;
+    public Combo[] comboDictionary;
     
     // the compiled combo tree
     private ComboNode comboRoot;
