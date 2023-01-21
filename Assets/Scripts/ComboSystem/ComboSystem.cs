@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class ComboSystem : MonoBehaviour {
     public ComboDictionary comboDictionary;
+    
+    // the compiled combo tree
+    private ComboNode comboRoot;
     public ComboNode comboPointer;
 
-    private ComboNode comboRoot;
 
-    void Start() {
+    private new void Awake() {
         comboRoot = new ComboNode();
-    }
-    
-    void Update() {
+        comboPointer = comboRoot;
 
+        // build the tree
+        for (int i = 0; i < comboDictionary.Length; i++) { 
+        }
     }
+
+
 }
 
 // tree made up of ComboNode's, aren't you glad we took [Data Structures H]?

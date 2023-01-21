@@ -62,8 +62,7 @@ public class InputReciever : MonoBehaviour
  * 10: B
  **/
 public enum InputID {
-    N = 0, R = 1, RU = 2, U = 3, LU = 4, L = 5, LD = 6, D = 7, RD = 8,
-
+    Neutral = 0, Right = 1, Rightup = 2, Up = 3, Leftup= 4, Left = 5, Leftdown = 6, Down = 7, Rightdown = 8,
     A = 9,
     B = 10
 }
