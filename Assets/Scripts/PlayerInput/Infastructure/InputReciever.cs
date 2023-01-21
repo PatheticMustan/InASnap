@@ -36,10 +36,11 @@ public class InputReciever : MonoBehaviour
 
     protected virtual void Direction(Vector2 dir)
     {
-        //Convert to angles of 45 degree intervals
+        // Convert to angles of 45 degree intervals
+        // (180/pi)/45 = 1.27323
         float d = Mathf.Atan2(dir.y, dir.x) * 1.27323f;
 
-        //Convert to proper enum value
+        // Convert to proper enum value
         InputAction((InputID)(Mathf.Round(d) + (d >= 0 ? 1 : 9)));
     }
 
@@ -54,17 +55,14 @@ public class InputReciever : MonoBehaviour
     }
 }
 
-public enum InputID
-{
-    N = 0,
-    R = 1,
-    RU = 2,
-    U = 3,
-    LU = 4,
-    L = 5,
-    LD = 6,
-    D = 7,
-    RD = 8,
+/** Movement Key:
+ * 0-8: joystick, with 0=neutral, 1=right, 2=upright, 3=up,
+ *                  4=upleft, 5=left, 6=downleft, 7=down, 8=downright
+ * 9: A
+ * 10: B
+ **/
+public enum InputID {
+    N = 0, R = 1, RU = 2, U = 3, LU = 4, L = 5, LD = 6, D = 7, RD = 8,
 
     A = 9,
     B = 10
