@@ -20,18 +20,32 @@ public class MovementObject {
 
 [System.Serializable]
 public struct MoveState {
+
+    public MoveStateType type;
+
     [Header("Input Key")]
     [Tooltip("0-8: joystick, with 0=neutral, 1=right, 2=upright,\n3=up, 4 = upleft, 5 = left,\n6 = downleft, 7 = down, 8 = downright\n9: A\n10: B")]
     public InputID key;
+
+    public InputID extraKey;
 
     [Space(10)]
     public float minDuration;
     public float maxDuration;
 
-    public MoveState(InputID key = 0, float min = 0.1f, float max = 1f) {
+    public MoveState(MoveStateType type = MoveStateType.Single, InputID key = 0, InputID extraKey = 0, float min = 0.1f, float max = 1f) {
+        this.type = type;
         this.key = key;
+        this.extraKey = extraKey;
         this.minDuration = min;
         this.maxDuration = max;
     }
+}
+
+public enum MoveStateType {
+    Single,
+    Double,
+    Polyrhythm,
+    Hold
 }
 
