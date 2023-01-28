@@ -8,6 +8,7 @@ using TMPro;
 public class DialogueReader : InputReciever
 {
     [SerializeField] private Image characterImage;
+    [SerializeField] private TMP_Text characterNameText;
     [SerializeField] private TMP_Text dialogueText;
 
     [SerializeField] private bool recieveInput;
@@ -59,6 +60,9 @@ public class DialogueReader : InputReciever
     public void DisplayNode(CharacterProfile character, DialogueNode node) {
         characterImage.sprite = character.GetEmotion(node.emote);
         characterBlip.clip = character.textBlip;
+
+        characterNameText.text = character.characterName;
+        characterNameText.color = character.color;
 
         textReading = ReadText(node.text, node.tickSpeed);
         StartCoroutine(textReading);

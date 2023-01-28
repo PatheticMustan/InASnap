@@ -40,6 +40,13 @@ public struct MoveState {
         this.minDuration = min;
         this.maxDuration = max;
     }
+
+    public bool Equals(MoveState other) {
+        return
+            type == other.type &&
+            key == other.key &&
+            (type == other.type || extraKey == other.extraKey);
+    }
 }
 
 public enum MoveStateType {

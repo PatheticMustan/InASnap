@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: AAAAAAAAAAAAAAAAA
   color:
     serializedVersion: 2
-    rgba: 8584960
+    rgba: 4286775040
   characterEmotionSprites:
   - emote: 0
     image: {fileID: 21300000, guid: 473c750f385030c4da76dc519af098e6, type: 3}
