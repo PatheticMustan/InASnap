@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548d2028629adfc4c8bf104162610c24, type: 3}
   m_Name: NewCombo
   m_EditorClassIdentifier: 
-  data: []
+  data:
+  - type: 2
+    key: 5
+    extraKey: 1
+    minDuration: 0
+    maxDuration: 0
+  - type: 0
+    key: 1
+    extraKey: 0
+    minDuration: 0
+    maxDuration: 0

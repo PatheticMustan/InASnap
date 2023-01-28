@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc308c8f4e2df643a6fef140496fe4b, type: 3}
+  m_Name: TestComboList
+  m_EditorClassIdentifier: 
+  listName: 'Test '
+  list:
+  - {fileID: 11400000, guid: 01ce032d1f60af14db80e5da897095ef, type: 2}
+  - {fileID: 11400000, guid: 459fdb0c5d3bec2408fd5f7bd1fa3fe8, type: 2}
+  - {fileID: 11400000, guid: 01ce032d1f60af14db80e5da897095ef, type: 2}

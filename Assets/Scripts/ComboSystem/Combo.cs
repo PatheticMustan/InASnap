@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Combos")]
+[CreateAssetMenu(menuName = "Combo System/Combo")]
 public class Combo : ScriptableObject {
     // Put varible for the combo in here as a array, so we can put as many combos as we want in here and in seperate combo dictionaries for each level
 

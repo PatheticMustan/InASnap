@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ComboSystem : MonoBehaviour {
-    public Combo[] comboDictionary;
+    public ComboList comboList;
     
     // the compiled combo tree
     private ComboNode comboRoot;
@@ -20,8 +20,9 @@ public class ComboSystem : MonoBehaviour {
 
         // build the tree
         // Go through every combo in the dictionary
-        for (int i = 0; i < comboDictionary.Length; i++) {
-            state = comboDictionary[i].data;
+        for (int i = 0; i < comboList.list.Length; i++) {
+            Debug.Log(i);
+            state = comboList.list[i].data;
 
             comboPointer = comboRoot;
 
@@ -32,7 +33,7 @@ public class ComboSystem : MonoBehaviour {
                 comboNodeList = comboPointer.branches[state[j].key];
 
                 //Check inside branch to see if any are similar
-                for (int c = 0; c < comboPointer.branches.Count; c++) {
+                for (int c = 0; c < comboNodeList.Count; c++) {
                     if (comboNodeList[c].state.Equals(state[i])) {
                         comboPointer = comboNodeList[c];
                         flag = true;
@@ -66,6 +67,8 @@ public class ComboSystem : MonoBehaviour {
 
             }
         }
+
+        comboRoot.DebugTree("S");
     }
 
 
@@ -83,22 +86,27 @@ public class ComboNode {
 
     public ComboNode() {
         for (int i = 0; i <= 10; i++) {
-            branches[(InputID)i] = new List<ComboNode>();
+            branches[(InputID)i] = new List<ComboNode>(0);
         }
     }
 
 #if UNITY_EDITOR
     public void DebugTree(string pre) {
-        string store = pre + " [";
+        string store = pre + " [ ";
+        InputID id;
+
         for (int i = 0; i < branches.Count; i++) {
-            if (branches[(InputID)i].Count != 0) {
-                for (int j = 0; j < branches.Count; j++) {
-                    store += (InputID)i + branches[(InputID)i][j].state.type.ToString();
-                    DebugTree(pre + (InputID)i + branches[(InputID)i][j].state.type.ToString());
+            
+            id = (InputID)i;
+            if (branches[id].Count != 0) {
+                for (int j = 0; j < branches[id].Count; j++) {
+                    store += id + branches[id][j].state.type.ToString() + ", ";
+                    //DebugTree(pre + id + branches[id][j].state.type.ToString());
                 }
             }
-            
         }
+        store += "]";
+        Debug.Log(store);
     }
 #endif
 

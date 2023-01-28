@@ -14,12 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - type: 0
-    key: 0
+    key: 7
     extraKey: 0
     minDuration: 0
     maxDuration: 0
-  - type: -1
-    key: 0
+  - type: 0
+    key: 8
+    extraKey: 0
+    minDuration: 0
+    maxDuration: 0
+  - type: 0
+    key: 1
     extraKey: 0
     minDuration: 0
     maxDuration: 0
