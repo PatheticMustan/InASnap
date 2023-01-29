@@ -14,7 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - type: 0
-    key: 7
+    key: 3
+    extraKey: 0
+    minDuration: 0
+    maxDuration: 0
+  - type: 0
+    key: 2
+    extraKey: 0
+    minDuration: 0
+    maxDuration: 0
+  - type: 0
+    key: 1
     extraKey: 0
     minDuration: 0
     maxDuration: 0
@@ -24,7 +34,7 @@ MonoBehaviour:
     minDuration: 0
     maxDuration: 0
   - type: 0
-    key: 1
+    key: 7
     extraKey: 0
     minDuration: 0
     maxDuration: 0
