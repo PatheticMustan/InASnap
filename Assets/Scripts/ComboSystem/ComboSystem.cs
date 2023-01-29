@@ -14,14 +14,14 @@ public class ComboSystem : MonoBehaviour {
         comboRoot = new ComboNode();
         comboPointer = comboRoot;
 
-        MoveState[] state;
+        MoveState[] currentCombo;
         bool flag;
         List<ComboNode> comboNodeList;
 
         // build the tree
         // Go through every combo in the dictionary
         for (int i = 0; i < comboDictionary.Length; i++) {
-            state = comboDictionary[i].data;
+            currentCombo = comboDictionary[i].data;
 
             comboPointer = comboRoot;
 

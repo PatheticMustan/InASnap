@@ -9,24 +9,13 @@ public class Combo : ScriptableObject {
     public MoveState[] data;
 }
 
-public class ComboObject {
-
-}
-
-[System.Serializable]
-public class MovementObject {
-
-}
-
 [System.Serializable]
 public struct MoveState {
-
     public MoveStateType type;
 
     [Header("Input Key")]
     [Tooltip("0-8: joystick, with 0=neutral, 1=right, 2=upright,\n3=up, 4 = upleft, 5 = left,\n6 = downleft, 7 = down, 8 = downright\n9: A\n10: B")]
     public InputID key;
-
     public InputID extraKey;
 
     [Space(10)]
