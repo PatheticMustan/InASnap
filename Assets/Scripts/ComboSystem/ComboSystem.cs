@@ -22,18 +22,67 @@ public class ComboSystem : MonoBehaviour {
         // Go through every combo in the dictionary
         for (int i = 0; i < comboDictionary.Length; i++) {
             currentCombo = comboDictionary[i].data;
-
             comboPointer = comboRoot;
 
-            //Go Through each state of a combo
-            for (int j = 0; j < state.Length; j++) {
 
+            /** The process of converting a combo to a link of comboNodes (last edited by Natsumi, 1/29/2023 3:33)
+             * I'm a strong believer in documentation
+             * 
+             * First we must consider the following
+             * - A Combo is just a MoveState[]
+             * - A ComboNode contains a MoveState, and children ComboNodes. It's designed this way so we can convert 
+             *      Combo's to chains of ComboNodes, which we can later merge into one big tree.
+             *      Merging will allow us to quickly traverse down any possible number of combos, which makes
+             *      things awfully convenient for us later on when we want to figure out what animation/sounds
+             *      we need to play, and if the combo fufills any objectives
+             * - If you squint really hard and only consider one combo at a time, a ComboNode is really just a
+             *      chain of MoveState's.
+             *      
+             * As we're building the combo tree, we're going to be adding the ComboNodes directly on, but just so 
+             * we can understand how it would work, we can pretend we're just going to make one combo.
+             * 
+             * 
+             * THE PROCESS!!!
+             * 0. Initialize. [Combo combo] is picked out of ComboDictionary already,
+             *                [ComboNode root] is going to be our starting ComboNode (and should never change), 
+             *                [ComboNode currentCombo] is going to be an empty ComboNode, and
+             *                [ComboNode pointer] is going to be set to currentCombo, but will point to whatever MoveState we're editing. 
+             * 1. Loop 0-n
+             *      1a. combo[i] gives us a MoveState (we're going to go over the combo move by move)
+             *          now we're going to set the head's moveState
+             *          pointer.moveState = combo[i]
+             *      1b. Next we're going to create the next body. The fleshy chunky bits if you will.
+             *          pointer.branches[combo[i]] = new ComboNode()
+             *      1c. Point to our new friend!
+             *          pointer = pointer.branches[combo[i]]
+             *    This will keep going until it reaches the end of the combo! Right now it should look like this
+             *    MoveState->MoveState->MoveState->MoveState
+             *    Now we want to merge it into root! This becomes tricky as we have to later implement timing
+             * 2. we're gonna add to the root now! We can safely ignore root.moveState
+             *      2a. pointer2 = root, pointer1 = currentCombo
+             *      2b. traverse that badboy until you find a place where no ComboNode has gone before
+             *      2c. Add a new comboNode, pointer2.moveState = pointer1.moveState
+             *      2d. that's kinda it
+             * 
+             * I have some thoughts on how long notes can be implemented, but I honestly have no idea how to implement polyrhythms in the game.
+             * I'm just completely lost for that one. I'm not sure it's even possible.
+             * For long notes, instead of List<MovementState>, each movement state would have a maxTime limit, the minLimit would be the previous max
+             * This also means we can assign different combos depending on how long you hold the key, which can be helpful if we wanted to design for
+             * charge attacks.
+             * ({ MovementState ms, float max })[]
+             **/
+
+
+            Debug.Log("natsumi");
+            //Go Through each state of a combo
+            for (int j = 0; j < currentCombo.Length; j++) {
+                Debug.Log("cratsumi");
                 flag = false;
-                comboNodeList = comboPointer.branches[state[j].key];
+                comboNodeList = comboPointer.branches[currentCombo[j].key];
 
                 //Check inside branch to see if any are similar
                 for (int c = 0; c < comboPointer.branches.Count; c++) {
-                    if (comboNodeList[c].state.Equals(state[i])) {
+                    if (comboNodeList[c].moveState.Equals(currentCombo[i])) {
                         comboPointer = comboNodeList[c];
                         flag = true;
                         break;
@@ -43,16 +92,17 @@ public class ComboSystem : MonoBehaviour {
                     continue;
                 }
 
-                ComboNode newNode = new ComboNode { state = state[i] };
+                /*
+                ComboNode newNode = new ComboNode { moveState = currentCombo[i] };
                 comboNodeList.Add(newNode);
 
                 //Make pointer at other extra key if needed
-                if (state[i].type != MoveStateType.Single) {
+                if (currentCombo[i].type != MoveStateType.Single) {
 
-                    comboNodeList = comboPointer.branches[state[j].extraKey];
+                    comboNodeList = comboPointer.branches[currentCombo[j].extraKey];
 
                     for (int c = 0; c < comboPointer.branches.Count; c++) {
-                        if (comboNodeList[c].state.Equals(state[i])) {
+                        if (comboNodeList[c].moveState.Equals(currentCombo[i])) {
                             comboPointer = comboNodeList[c];
                             flag = true;
                             break;
@@ -63,7 +113,7 @@ public class ComboSystem : MonoBehaviour {
                     }
                 }
                 comboPointer = newNode;
-
+                */
             }
         }
     }
@@ -75,7 +125,7 @@ public class ComboSystem : MonoBehaviour {
 // to traverse down the tree, use root.branches[InputID]
 public class ComboNode {
     public Dictionary<InputID, List<ComboNode>> branches = new Dictionary<InputID, List<ComboNode>>();
-    public MoveState state;
+    public MoveState moveState;
 
     // Animation
     // Sound
@@ -93,8 +143,8 @@ public class ComboNode {
         for (int i = 0; i < branches.Count; i++) {
             if (branches[(InputID)i].Count != 0) {
                 for (int j = 0; j < branches.Count; j++) {
-                    store += (InputID)i + branches[(InputID)i][j].state.type.ToString();
-                    DebugTree(pre + (InputID)i + branches[(InputID)i][j].state.type.ToString());
+                    store += (InputID)i + branches[(InputID)i][j].moveState.type.ToString();
+                    DebugTree(pre + (InputID)i + branches[(InputID)i][j].moveState.type.ToString());
                 }
             }
             
