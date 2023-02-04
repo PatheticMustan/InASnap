@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboList: {fileID: 11400000, guid: 352873faa0bfa3b409f4714085abd5b1, type: 2}
+  maxCoumboLength: 32
 --- !u!4 &953158797
 Transform:
   m_ObjectHideFlags: 0

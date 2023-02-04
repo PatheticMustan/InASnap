@@ -10,6 +10,9 @@ public class ComboReader : InputReciever {
     protected new void Awake() {
         base.Awake();
         tony = new List<TInput>();
+        for (int i = 0; i < maxCoumboLength; i++) {
+            tony.Add(new TInput(InputID.Neutral, 0));
+        }
     }
 
     private void FixedUpdate() {
@@ -30,15 +33,57 @@ public class ComboReader : InputReciever {
 
         // loop through each combo, check
         for (int i = 0; i < comboList.list.Length; i++) {
-            MoveState[] requiredInputs = comboList.list[i].data;
-
-            // verify inputs in reverse order
-            for (int o = requiredInputs.Length - 1; o >= 0; o--) {
-
+            //Debug.Log("checking " + comboList.list[i].name + "...");
+            if (CheckCombo(i)) {
+                Debug.Log("valid combo! " + comboList.list[i].name);
             }
         }
     }
+
+    private bool CheckCombo(int comboIndex) {
+        MoveState[] requiredInputs = comboList.list[comboIndex].data;
+
+        // verify inputs in reverse order
+        int currentInputIndex = tony.Count - 1;
+
+        for (int i = requiredInputs.Length - 1; i >= 0; i--) {
+            // check if it's included in one of the buffer moves
+            if (requiredInputs[i].bufferMoves.Contains(tony[currentInputIndex].inputID)) {
+                // buffer move, keep i the same but decrement currentInputID
+                if (currentInputIndex > 1) {
+                    currentInputIndex--;
+                    i++;
+                    continue;
+                } else {
+                    // we've reached the end of tony... sorry tony
+                    return false;
+                }
+            }
+
+
+
+            
+            if (requiredInputs[i].key != tony[currentInputIndex].inputID) {
+                // the combo is invalid, continue on to the next one
+                return false;
+            }
+
+            // check for valid time window
+
+
+            // check for invalid index
+            currentInputIndex--;
+            if (currentInputIndex < 0) {
+                Debug.Log("thrown early");
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
+
+
 
 public struct TInput {
     public InputID inputID;
