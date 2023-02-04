@@ -361,11 +361,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 953158795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3f57e8520d84d449c7b203debb1875, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e22462d236ba1640a98dd41b329a223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comboDictionary:
-  - {fileID: 11400000, guid: 01ce032d1f60af14db80e5da897095ef, type: 2}
+  comboList: {fileID: 11400000, guid: 352873faa0bfa3b409f4714085abd5b1, type: 2}
+  maxCoumboLength: 32
 --- !u!4 &953158797
 Transform:
   m_ObjectHideFlags: 0
