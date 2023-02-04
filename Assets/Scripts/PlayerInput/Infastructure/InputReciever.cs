@@ -7,7 +7,6 @@ public class InputReciever : MonoBehaviour
 {
     [SerializeField] protected InputController controls;
 
-    public Queue<InputID> inputQueue { protected get; set; }
     protected float timeBetweenActions;
 
     protected virtual void Awake()

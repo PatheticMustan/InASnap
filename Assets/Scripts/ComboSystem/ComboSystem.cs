@@ -20,8 +20,8 @@ public class ComboSystem : MonoBehaviour {
 
         // build the tree
         // Go through every combo in the dictionary
-        for (int i = 0; i < comboDictionary.Length; i++) {
-            currentCombo = comboDictionary[i].data;
+        for (int i = 0; i < comboList.list.Length; i++) {
+            currentCombo = comboList.list[i].data;
             comboPointer = comboRoot;
 
 
