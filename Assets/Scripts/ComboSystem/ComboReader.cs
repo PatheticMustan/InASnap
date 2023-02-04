@@ -10,6 +10,8 @@ public class ComboReader : InputReciever
 
     // Start is called before the first frame update
     protected new void Awake() {
+        base.Awake();
+
         inputQueue = new Queue<InputID>();
     }
 
