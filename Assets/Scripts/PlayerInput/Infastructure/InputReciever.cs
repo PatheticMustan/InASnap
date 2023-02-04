@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InputReciever : MonoBehaviour
 {
-    [SerializeField] protected InputController controls;
+    protected InputController controls;
 
     protected float timeBetweenActions;
 

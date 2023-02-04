@@ -112,6 +112,74 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Editor",
+            "id": "86e8d632-9d44-4ad2-8002-2cff07995d37",
+            "actions": [
+                {
+                    "name": "PressRight",
+                    "type": "Button",
+                    "id": "774265e7-032c-4761-aaf7-82bb10ec74e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HoldRight",
+                    "type": "Button",
+                    "id": "3df9799e-325e-4a5e-bf10-4490cfd40d16",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MousePos",
+                    "type": "Value",
+                    "id": "556dfb92-15d8-480e-8da9-a43179a78313",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b74a2c12-1c28-4d30-9e2c-ea40c73a1674",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HoldRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0bff3a29-3a46-4c88-961f-07b2c491f631",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eea8c59d-69e7-4652-aaeb-19d2cf0e2d06",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

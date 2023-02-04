@@ -134,6 +134,74 @@ public partial class @InputController : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Editor"",
+            ""id"": ""86e8d632-9d44-4ad2-8002-2cff07995d37"",
+            ""actions"": [
+                {
+                    ""name"": ""PressRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""774265e7-032c-4761-aaf7-82bb10ec74e0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HoldRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""3df9799e-325e-4a5e-bf10-4490cfd40d16"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""556dfb92-15d8-480e-8da9-a43179a78313"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b74a2c12-1c28-4d30-9e2c-ea40c73a1674"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HoldRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0bff3a29-3a46-4c88-961f-07b2c491f631"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eea8c59d-69e7-4652-aaeb-19d2cf0e2d06"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -160,6 +228,11 @@ public partial class @InputController : IInputActionCollection2, IDisposable
         m_Player_APress = m_Player.FindAction("APress", throwIfNotFound: true);
         m_Player_BPress = m_Player.FindAction("BPress", throwIfNotFound: true);
         m_Player_Direction = m_Player.FindAction("Direction", throwIfNotFound: true);
+        // Editor
+        m_Editor = asset.FindActionMap("Editor", throwIfNotFound: true);
+        m_Editor_PressRight = m_Editor.FindAction("PressRight", throwIfNotFound: true);
+        m_Editor_HoldRight = m_Editor.FindAction("HoldRight", throwIfNotFound: true);
+        m_Editor_MousePos = m_Editor.FindAction("MousePos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -264,6 +337,55 @@ public partial class @InputController : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Editor
+    private readonly InputActionMap m_Editor;
+    private IEditorActions m_EditorActionsCallbackInterface;
+    private readonly InputAction m_Editor_PressRight;
+    private readonly InputAction m_Editor_HoldRight;
+    private readonly InputAction m_Editor_MousePos;
+    public struct EditorActions
+    {
+        private @InputController m_Wrapper;
+        public EditorActions(@InputController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PressRight => m_Wrapper.m_Editor_PressRight;
+        public InputAction @HoldRight => m_Wrapper.m_Editor_HoldRight;
+        public InputAction @MousePos => m_Wrapper.m_Editor_MousePos;
+        public InputActionMap Get() { return m_Wrapper.m_Editor; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(EditorActions set) { return set.Get(); }
+        public void SetCallbacks(IEditorActions instance)
+        {
+            if (m_Wrapper.m_EditorActionsCallbackInterface != null)
+            {
+                @PressRight.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnPressRight;
+                @PressRight.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnPressRight;
+                @PressRight.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnPressRight;
+                @HoldRight.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnHoldRight;
+                @HoldRight.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnHoldRight;
+                @HoldRight.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnHoldRight;
+                @MousePos.started -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+                @MousePos.performed -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+                @MousePos.canceled -= m_Wrapper.m_EditorActionsCallbackInterface.OnMousePos;
+            }
+            m_Wrapper.m_EditorActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PressRight.started += instance.OnPressRight;
+                @PressRight.performed += instance.OnPressRight;
+                @PressRight.canceled += instance.OnPressRight;
+                @HoldRight.started += instance.OnHoldRight;
+                @HoldRight.performed += instance.OnHoldRight;
+                @HoldRight.canceled += instance.OnHoldRight;
+                @MousePos.started += instance.OnMousePos;
+                @MousePos.performed += instance.OnMousePos;
+                @MousePos.canceled += instance.OnMousePos;
+            }
+        }
+    }
+    public EditorActions @Editor => new EditorActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -287,5 +409,11 @@ public partial class @InputController : IInputActionCollection2, IDisposable
         void OnAPress(InputAction.CallbackContext context);
         void OnBPress(InputAction.CallbackContext context);
         void OnDirection(InputAction.CallbackContext context);
+    }
+    public interface IEditorActions
+    {
+        void OnPressRight(InputAction.CallbackContext context);
+        void OnHoldRight(InputAction.CallbackContext context);
+        void OnMousePos(InputAction.CallbackContext context);
     }
 }
