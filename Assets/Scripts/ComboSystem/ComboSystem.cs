@@ -15,16 +15,11 @@ public class ComboSystem : MonoBehaviour {
         comboPointer = comboRoot;
 
         MoveState[] currentCombo;
-        bool flag;
         List<ComboNode> comboNodeList;
 
         // build the tree
         // Go through every combo in the dictionary
         for (int i = 0; i < comboList.list.Length; i++) {
-            currentCombo = comboList.list[i].data;
-            comboPointer = comboRoot;
-
-
             /** The process of converting a combo to a link of comboNodes (last edited by Natsumi, 1/29/2023 3:33)
              * I'm a strong believer in documentation
              * 
@@ -72,86 +67,39 @@ public class ComboSystem : MonoBehaviour {
              * ({ MovementState ms, float max })[]
              **/
 
+            // 0, initialize
+            currentCombo = comboList.list[i].data;
+            comboPointer = comboRoot;
 
             Debug.Log("natsumi");
             //Go Through each state of a combo
             for (int j = 0; j < currentCombo.Length; j++) {
                 Debug.Log("cratsumi");
-                flag = false;
                 comboNodeList = comboPointer.branches[currentCombo[j].key];
 
-                //Check inside branch to see if any are similar
-                for (int c = 0; c < comboPointer.branches.Count; c++) {
-                    if (comboNodeList[c].moveState.Equals(currentCombo[i])) {
-                        comboPointer = comboNodeList[c];
-                        flag = true;
-                        break;
-                    }
-                }
-                if (flag) {
-                    continue;
-                }
 
-                /*
-                ComboNode newNode = new ComboNode { moveState = currentCombo[i] };
-                comboNodeList.Add(newNode);
-
-                //Make pointer at other extra key if needed
-                if (currentCombo[i].type != MoveStateType.Single) {
-
-                    comboNodeList = comboPointer.branches[currentCombo[j].extraKey];
-
-                    for (int c = 0; c < comboPointer.branches.Count; c++) {
-                        if (comboNodeList[c].moveState.Equals(currentCombo[i])) {
-                            comboPointer = comboNodeList[c];
-                            flag = true;
-                            break;
-                        }
-                    }
-                    if (!flag) {
-                        comboNodeList.Add(newNode);
-                    }
-                }
-                comboPointer = newNode;
-                */
-            }
         }
 
-        comboRoot.DebugTree("S");
+        //comboRoot.DebugTree("S");
     }
 
 
 }
 
-// tree made up of ComboNode's, aren't you glad we took [Data Structures H]? 
-// to traverse down the tree, use root.branches[InputID]
-public class ComboNode {
-    public Dictionary<InputID, List<ComboNode>> branches = new Dictionary<InputID, List<ComboNode>>();
-    public MoveState moveState;
+    // tree made up of ComboNode's, aren't you glad we took [Data Structures H]? 
+    // to traverse down the tree, use root.branches[InputID]
+    public class ComboNode {
+        public Dictionary<InputID, List<ComboNode>> branches = new Dictionary<InputID, List<ComboNode>>();
+        public MoveState moveState;
 
-    // Animation
-    // Sound
-    // Particle
+        // Animation
+        // Sound
+        // Particle
 
-    public ComboNode() {
-        for (int i = 0; i <= 10; i++) {
-            branches[(InputID)i] = new List<ComboNode>(0);
-        }
-    }
-
-#if UNITY_EDITOR
-    public void DebugTree(string pre) {
-        string store = pre + " [";
-        for (int i = 0; i < branches.Count; i++) {
-            if (branches[(InputID)i].Count != 0) {
-                for (int j = 0; j < branches.Count; j++) {
-                    store += (InputID)i + branches[(InputID)i][j].moveState.type.ToString();
-                    DebugTree(pre + (InputID)i + branches[(InputID)i][j].moveState.type.ToString());
-                }
+        public ComboNode() {
+            for (int i = 0; i <= 10; i++) {
+                branches[(InputID)i] = new List<ComboNode>(0);
             }
-            
         }
     }
-#endif
-
 }
