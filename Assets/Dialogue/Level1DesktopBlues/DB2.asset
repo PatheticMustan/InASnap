@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d7b3853208fb8439da9fa7e62fc567, type: 3}
+  m_Name: DB2
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 11400000, guid: d629df9c6dda0654392d8d496aa3efad, type: 2}
+  - {fileID: 11400000, guid: cf787976e2a5c4143a9f66a717657c0e, type: 2}
+  - {fileID: 11400000, guid: 8e75f10e5759d1b4a904b66be030402e, type: 2}
+  dialogue:
+  - characterID: 2
+    emote: 0
+    text: 'New Mechanic: Blue Notes'
+    tickSpeed: 0.05
+    hasMaxTime: 0
+    maxTime: 0
+  - characterID: 2
+    emote: 0
+    text: 'For Red Notes, just hit the key
+
+      For Blue Notes, hold the key in
+      that direction!'
+    tickSpeed: 0
+    hasMaxTime: 0
+    maxTime: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Dialogue")]
+[CreateAssetMenu(menuName = "Dialogue System/Dialogue")]
 public class Dialogue : ScriptableObject
 {
     public CharacterProfile[] characters;

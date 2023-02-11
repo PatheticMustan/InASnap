@@ -40,6 +40,11 @@ public class DialogueReader : InputReciever
         }
     }
 
+    public void StartGame() {
+        GameManager.Instance.isPlaying = true;
+        GameManager.Instance.gameTime = 0;
+    }
+
     public void ReadDialogue(Dialogue dialogue) {
         dialougePointer = 0;
         dialoguePlaying = true;
@@ -55,9 +60,11 @@ public class DialogueReader : InputReciever
         if (dialougePointer >= dialogueObj.dialogue.Length) {
             dialoguePlaying = false;
 
-            if(dialoguePlaying == false) {
+            StartGame();
+
+            /*if(dialoguePlaying == false) {
                 if (TranstionButton) TranstionButton.interactable = true;
-            }
+            }*/
            
             return;
         }

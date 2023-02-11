@@ -4,20 +4,42 @@ using UnityEngine;
 
 public class GuitarStore : MonoBehaviour
 {
+    public GameObject hitSquare;
+
     public DialogueReader reader;
+    public float[] length;
     public Dialogue[] dialogues;
     public GameObject[] levelStore;
+
+    public Dialogue dialogueEnd;
+
+    private int levelPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartLevel(0);
+        levelPos = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        InputID key = GameManager.Instance.currentKey;
+        if ((int)key >= 1 && (int)key <= 9) {
+            hitSquare.transform.eulerAngles = Vector3.forward * 45 * ((int)key - 1);
+        }
+
+        if (GameManager.Instance.isPlaying && GameManager.Instance.gameTime >= length[levelPos]) {
+            if (levelPos + 1 == levelStore.Length) {
+                GameManager.Instance.isPlaying = false;
+                reader.ReadDialogue(dialogueEnd);
+            } else {
+                levelPos++;
+                StartLevel(levelPos);
+            }
+            
+        }
     }
 
     public Vector3 NotePosition(float eval) {
@@ -29,6 +51,14 @@ public class GuitarStore : MonoBehaviour
             levelStore[i].SetActive(id == i);
         }
 
+        levelPos = id;
+        GameManager.Instance.gameTime = 0;
+        GameManager.Instance.isPlaying = false;
+
         reader.ReadDialogue(dialogues[id]);
     }
+
+
+
+
 }

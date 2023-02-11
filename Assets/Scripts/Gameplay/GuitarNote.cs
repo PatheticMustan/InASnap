@@ -43,7 +43,7 @@ public class GuitarNote : MonoBehaviour
     }
 
     public void PressNote(InputID id) {
-        Debug.Log("Press");
+        //Debug.Log("Press");
         eval = GameManager.Instance.gameTime - timeValue;
         if (id == key && Mathf.Abs(eval) <= .2f) {
             gameObject.SetActive(false);
