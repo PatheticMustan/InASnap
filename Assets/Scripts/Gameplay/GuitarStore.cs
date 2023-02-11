@@ -20,8 +20,8 @@ public class GuitarStore : MonoBehaviour
         
     }
 
-    public void NotePosition() {
-
+    public Vector3 NotePosition(float eval) {
+        return Vector3.left * eval * 2f;
     }
 
     public void StartLevel(int id) {
