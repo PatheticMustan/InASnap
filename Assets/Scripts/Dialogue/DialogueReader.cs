@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class DialogueReader : InputReciever
@@ -21,9 +22,12 @@ public class DialogueReader : InputReciever
     private bool dialoguePlaying;
     private bool isTalking;
     private IEnumerator textReading;
+    public Button TranstionButton;
 
-    
 
+    void Start() {
+        TranstionButton.interactable = false;
+    }
     private new void Awake() {
         base.Awake();
 
@@ -50,6 +54,11 @@ public class DialogueReader : InputReciever
 
         if (dialougePointer >= dialogueObj.dialogue.Length) {
             dialoguePlaying = false;
+
+            if(dialoguePlaying == false) {
+                TranstionButton.interactable = true;
+            }
+           
             return;
         }
 
@@ -96,5 +105,9 @@ public class DialogueReader : InputReciever
         } else {
             Debug.LogError("No read?");
         }
+    }
+
+    public void ButtonLvlSelection() {
+        SceneManager.LoadScene("LevelSelection");
     }
 }

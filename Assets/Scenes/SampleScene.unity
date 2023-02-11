@@ -134,11 +134,11 @@ GameObject:
   m_Component:
   - component: {fileID: 43119062}
   - component: {fileID: 43119065}
-  - component: {fileID: 43119066}
   - component: {fileID: 43119064}
   - component: {fileID: 43119063}
+  - component: {fileID: 43119066}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 308, y: -145}
+  m_AnchoredPosition: {x: 307.3, y: -179.9}
   m_SizeDelta: {x: 138.7464, y: 45.3167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43119063
@@ -208,29 +208,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375926333}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1375926336}
+        m_TargetAssemblyTypeName: DialogueReader, Assembly-CSharp
+        m_MethodName: ButtonLvlSelection
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 43119061}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &43119064
 MonoBehaviour:
@@ -279,7 +267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 43119061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6b384ce110c6a46862c43b05b72690, type: 3}
+  m_Script: {fileID: 11500000, guid: 467e73a8300883d4386530278224e397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &135644077 stripped
@@ -550,12 +538,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4824860442144743382}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1375926333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9002051288889751400, guid: 9beb83b34a349494a9a3616f8736a12b,
+--- !u!114 &1375926336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9002051288889751402, guid: 9beb83b34a349494a9a3616f8736a12b,
     type: 3}
   m_PrefabInstance: {fileID: 9002051288754238660}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8076b904559564a4ab5c6f098c3c4145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1798946358
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -640,8 +634,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1059,5 +1053,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9002051288889751402, guid: 9beb83b34a349494a9a3616f8736a12b,
+        type: 3}
+      propertyPath: TranstionButton
+      value: 
+      objectReference: {fileID: 43119063}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9beb83b34a349494a9a3616f8736a12b, type: 3}
