@@ -17,9 +17,18 @@ public class GameManager : InputReciever
     public InputID currentKey;
     public UnityEvent<InputID> keyPress;
 
+    public void KeyAddListener(UnityAction<InputID> action) {
+        if (keyPress == null) {
+            keyPress = new UnityEvent<InputID>();
+        }
+
+        keyPress.AddListener(action);
+    }
+
     protected override void InputAction(InputID inputID) {
         base.InputAction(inputID);
         keyPress.Invoke(inputID);
+        currentKey = inputID;
     }
 
     // Start is called before the first frame update
@@ -28,9 +37,15 @@ public class GameManager : InputReciever
         
     }
 
+    public void NoteHit() {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlaying) {
+            gameTime += Time.deltaTime;
+        }
     }
 }
