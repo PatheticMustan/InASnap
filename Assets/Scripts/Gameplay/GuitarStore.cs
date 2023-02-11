@@ -13,7 +13,11 @@ public class GuitarStore : MonoBehaviour
 
     public Dialogue dialogueEnd;
 
-    private int levelPos;
+    public int levelPos;
+
+    public AudioSource pluck;
+    public AudioSource pass;
+    public AudioSource strum;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +47,7 @@ public class GuitarStore : MonoBehaviour
     }
 
     public Vector3 NotePosition(float eval) {
-        return Vector3.left * eval * 2f;
+        return Vector3.left * eval * 4f;
     }
 
     public void StartLevel(int id) {
@@ -58,7 +62,15 @@ public class GuitarStore : MonoBehaviour
         reader.ReadDialogue(dialogues[id]);
     }
 
-
+    public void PlayGuitar(InputID id, bool isPass) {
+        if (isPass) {
+            pass.Play();
+        } else if (id == InputID.A) {
+            strum.Play();
+        } else {
+            pluck.Play();
+        }
+    }
 
 
 }

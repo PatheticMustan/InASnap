@@ -6,6 +6,7 @@ public class GuitarNote : MonoBehaviour
 {
     private GuitarStore store;
 
+    public int level;
     public float timeValue;
 
     public InputID key;
@@ -32,21 +33,27 @@ public class GuitarNote : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        eval = GameManager.Instance.gameTime - timeValue;
-        transform.localPosition = store.NotePosition(eval);
-        if (!press && pressChance && eval >= 0f) {
-            Debug.Log("What? " + GameManager.Instance.currentKey);
-            PressNote(GameManager.Instance.currentKey);
-            pressChance = false;
+        if (level == store.levelPos) {
+            eval = GameManager.Instance.gameTime - timeValue;
+            transform.localPosition = store.NotePosition(eval);
+            if (!press && pressChance && eval >= 0f) {
+                Debug.Log("What? " + GameManager.Instance.currentKey);
+                PressNote(GameManager.Instance.currentKey);
+                pressChance = false;
+            }
         }
+        
 
     }
 
     public void PressNote(InputID id) {
         //Debug.Log("Press");
-        eval = GameManager.Instance.gameTime - timeValue;
-        if (id == key && Mathf.Abs(eval) <= .2f) {
-            gameObject.SetActive(false);
+        if (level == store.levelPos) {
+            eval = GameManager.Instance.gameTime - timeValue;
+            if (id == key && Mathf.Abs(eval) <= .2f) {
+                store.PlayGuitar(key, !press);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
