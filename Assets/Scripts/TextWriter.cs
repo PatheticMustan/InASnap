@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TextWriter : MonoBehaviour
 {
@@ -9,12 +10,15 @@ public class TextWriter : MonoBehaviour
     public string[] lines;
     public float textspeed;
     private int index;
+    public Button SignIN;
+    public InputField Password;
 
 
     void Start()
     {
         textcomponent.text = string.Empty;
         StartD();
+        SignIN.interactable = false;
     }
     private void StartD()
     {
@@ -28,6 +32,12 @@ public class TextWriter : MonoBehaviour
         {
             textcomponent.text += c;
             yield return new WaitForSeconds(textspeed);
+            StopCoroutine(TypeLine());
+            if (Password == null) {
+                SignIN.interactable = false;
+            } else {
+                SignIN.interactable = true;
+            }
         }
     }
 
