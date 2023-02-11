@@ -26,7 +26,7 @@ public class DialogueReader : InputReciever
 
 
     void Start() {
-        TranstionButton.interactable = false;
+        if (TranstionButton) TranstionButton.interactable = false;
     }
     private new void Awake() {
         base.Awake();
@@ -56,7 +56,7 @@ public class DialogueReader : InputReciever
             dialoguePlaying = false;
 
             if(dialoguePlaying == false) {
-                TranstionButton.interactable = true;
+                if (TranstionButton) TranstionButton.interactable = true;
             }
            
             return;
