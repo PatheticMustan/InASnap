@@ -19,6 +19,10 @@ public class GuitarStore : MonoBehaviour
     public AudioSource pass;
     public AudioSource strum;
 
+    public ParticleSystem pluckPS;
+    public ParticleSystem passPS;
+    public ParticleSystem strumPS;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,10 +69,13 @@ public class GuitarStore : MonoBehaviour
     public void PlayGuitar(InputID id, bool isPass) {
         if (isPass) {
             pass.Play();
+            passPS.Play();
         } else if (id == InputID.A) {
             strum.Play();
+            strumPS.Play();
         } else {
             pluck.Play();
+            pluckPS.Play();
         }
     }
 

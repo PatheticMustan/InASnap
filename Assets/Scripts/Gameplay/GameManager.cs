@@ -14,6 +14,9 @@ public class GameManager : InputReciever
     public bool isPlaying;
     public float gameTime;
 
+    public Sprite[] evalSprite;
+    public SpriteRenderer evalDisplay;
+
     public InputID currentKey;
     public UnityEvent<InputID> keyPress;
 
@@ -37,8 +40,16 @@ public class GameManager : InputReciever
         
     }
 
-    public void NoteHit() {
+    //Forgive me Kevin and Sama
+    public void NoteHit(float eval) {
+        if (Mathf.Abs(eval) < .15) { evalDisplay.sprite = evalSprite[0]; }
+        else if (Mathf.Abs(eval) < .4) { evalDisplay.sprite = evalSprite[1]; }
+        else if (Mathf.Abs(eval) < .65) { evalDisplay.sprite = evalSprite[2]; }
+        else {evalDisplay.sprite = evalSprite[3]; }
+    }
 
+    public void NoteHiss() {
+        evalDisplay.sprite = evalSprite[4];
     }
 
     // Update is called once per frame
