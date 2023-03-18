@@ -18,6 +18,6 @@ MonoBehaviour:
   - characterID: 0
     emote: 0
     text: Thank you for playing our Demo!
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0

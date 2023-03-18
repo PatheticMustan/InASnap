@@ -37,10 +37,11 @@ public class GuitarNote : MonoBehaviour
             eval = GameManager.Instance.gameTime - timeValue;
             transform.localPosition = store.NotePosition(eval);
             if (!press && pressChance && eval >= 0f) {
-                Debug.Log("What? " + GameManager.Instance.currentKey);
-                GameManager.Instance.NoteHit(eval / .2f);
-                PressNote(GameManager.Instance.currentKey);
+                //Debug.Log("What? " + GameManager.Instance.currentKey);
+                //GameManager.Instance.NoteHit(eval / .2f);
+                //PressNote(GameManager.Instance.currentKey);
                 pressChance = false;
+                NoteHit(eval);
             }
         }
         
@@ -49,13 +50,17 @@ public class GuitarNote : MonoBehaviour
 
     public void PressNote(InputID id) {
         //Debug.Log("Press");
-        if (level == store.levelPos) {
+        if (level == store.levelPos && press) {
             eval = GameManager.Instance.gameTime - timeValue;
             if (id == key && Mathf.Abs(eval) <= .2f) {
-                store.PlayGuitar(key, !press);
-                GameManager.Instance.NoteHit(eval / .2f);
-                gameObject.SetActive(false);
+                NoteHit(eval);
             }
         }
+    }
+
+    public void NoteHit(float eval) {
+        store.PlayGuitar(key, !press);
+        GameManager.Instance.NoteHit(eval / .2f);
+        gameObject.SetActive(false);
     }
 }

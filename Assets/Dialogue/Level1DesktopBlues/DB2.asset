@@ -17,18 +17,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cf787976e2a5c4143a9f66a717657c0e, type: 2}
   - {fileID: 11400000, guid: 8e75f10e5759d1b4a904b66be030402e, type: 2}
   dialogue:
-  - characterID: 2
+  - characterID: 1
     emote: 0
-    text: 'New Mechanic: Blue Notes'
-    tickSpeed: 0.05
+    text: For the notes marked in red, we'll hit them
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
-  - characterID: 2
+  - characterID: 1
     emote: 0
-    text: 'For Red Notes, just hit the key
-
-      For Blue Notes, hold the key in
-      that direction!'
+    text: but for the blue notes, let's hold them down in their direction
     tickSpeed: 0
     hasMaxTime: 0
     maxTime: 0

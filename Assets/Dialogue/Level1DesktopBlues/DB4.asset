@@ -19,18 +19,20 @@ MonoBehaviour:
   - characterID: 0
     emote: 5
     text: I'm feeling the groove!
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 1
     emote: 0
-    text: You wanna try the song again?
-    tickSpeed: 0.05
+    text: 'Then, let''s play it again
+
+'
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 0
     emote: 1
     text: Sounds good!
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0

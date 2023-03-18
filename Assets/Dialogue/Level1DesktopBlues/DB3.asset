@@ -20,7 +20,7 @@ MonoBehaviour:
   - characterID: 1
     emote: 1
     text: That is more like it!
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 1
@@ -28,6 +28,6 @@ MonoBehaviour:
     text: 'There is something I want to try.
 
       It will be a little more difficult'
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0

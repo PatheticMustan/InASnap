@@ -18,6 +18,9 @@ public class EditorCameraMove : MonoBehaviour
 
         controls = new InputController();
 
+        Debug.Log("Win");
+        controls.Editor.Enable();
+
         controls.Editor.PressRight.performed += _ => ActivateMove(true);
         controls.Editor.HoldRight.canceled += _ => ActivateMove(false);
         controls.Editor.MousePos.performed += pos => MoveCamera(pos.ReadValue<Vector2>());
@@ -30,6 +33,7 @@ public class EditorCameraMove : MonoBehaviour
     }
 
     public void ActivateMove(bool flag) {
+        Debug.Log(flag);
         isDrag = flag;
         if (flag)
             origin = mousePos;
