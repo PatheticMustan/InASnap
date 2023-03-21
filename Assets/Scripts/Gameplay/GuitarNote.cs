@@ -26,7 +26,7 @@ public class GuitarNote : MonoBehaviour
     void Start()
     {
         if ((int)key >= 1 && (int)key <= 9) {
-            transform.eulerAngles = Vector3.forward * 45 * ((int)key-1);
+            transform.eulerAngles = 45 * ((int)key-1) * Vector3.forward;
         }
     }
 

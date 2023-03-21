@@ -35,7 +35,7 @@ public class GuitarStore : MonoBehaviour
     {
         InputID key = GameManager.Instance.currentKey;
         if ((int)key >= 1 && (int)key <= 9) {
-            hitSquare.transform.eulerAngles = Vector3.forward * 45 * ((int)key - 1);
+            hitSquare.transform.eulerAngles = 45 * ((int)key - 1) * Vector3.forward;
         }
 
         if (GameManager.Instance.isPlaying && GameManager.Instance.gameTime >= length[levelPos]) {
@@ -51,7 +51,7 @@ public class GuitarStore : MonoBehaviour
     }
 
     public Vector3 NotePosition(float eval) {
-        return Vector3.left * eval * 4f;
+        return eval * 4f * Vector3.left;
     }
 
     public void StartLevel(int id) {
