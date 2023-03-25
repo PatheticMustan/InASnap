@@ -35,8 +35,13 @@ public class DialogueReader : InputReciever
     }
 
     protected override void APress() {
-        if (recieveInput && dialoguePlaying && !isTalking) {
-            NextNode();
+        if (recieveInput && dialoguePlaying) {
+            if (isTalking && !currentNode.hasMaxTime) {
+                SkipDialogue();
+            } else {
+                NextNode();
+            }
+            
         }
     }
 
@@ -52,6 +57,14 @@ public class DialogueReader : InputReciever
 
         currentNode = dialogueObj.dialogue[0];
         DisplayNode(dialogueObj.characters[currentNode.characterID], currentNode);
+    }
+
+    public void SkipDialogue() {
+        if (textReading != null) {
+            StopCoroutine(textReading);
+            dialogueText.text = currentNode.text;
+            isTalking = false;
+        }
     }
 
     public void NextNode() {

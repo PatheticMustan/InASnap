@@ -20,7 +20,9 @@ MonoBehaviour:
   - emote: 0
     image: {fileID: 21300000, guid: 25b43f598e52505409fd1af81482917c, type: 3}
   - emote: 1
-    image: {fileID: 21300000, guid: b9caa2458fbe039418a33208b488bb2a, type: 3}
+    image: {fileID: 21300000, guid: 687c3f73fe89ef84f8b0a05df7757757, type: 3}
   - emote: 7
     image: {fileID: 21300000, guid: d1a3c9de3501b5f49b674078451527c2, type: 3}
+  - emote: 5
+    image: {fileID: 21300000, guid: 69dab4b4a548f7f4cbb5cae518c5ceb6, type: 3}
   textBlip: {fileID: 8300000, guid: e4d19140eab5e5146aa811f084ccf1a3, type: 3}

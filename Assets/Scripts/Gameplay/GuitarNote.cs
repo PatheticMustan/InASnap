@@ -14,6 +14,7 @@ public class GuitarNote : MonoBehaviour
     public bool press;
     private bool pressChance;
 
+
     private float eval;
 
     private void Awake() {
@@ -55,9 +56,10 @@ public class GuitarNote : MonoBehaviour
 
     public void PressNote(InputID id) {
         //Debug.Log("Press");
-        if (level == store.levelPos && press) {
+        if (level == store.levelPos && press && pressChance) {
             eval = GameManager.Instance.gameTime - timeValue;
             if (id == key && Mathf.Abs(eval) <= .2f) {
+                pressChance = false;
                 NoteHit(eval);
             }
         }

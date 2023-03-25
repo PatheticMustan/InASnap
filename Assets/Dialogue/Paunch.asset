@@ -18,7 +18,7 @@ MonoBehaviour:
     rgba: 4284901119
   characterEmotionSprites:
   - emote: 0
-    image: {fileID: 21300000, guid: 0323487f32a0def4cbbaf0f9263d0916, type: 3}
+    image: {fileID: 21300000, guid: a109598f93fc5e24c98fa60ab1ae1f0a, type: 3}
   - emote: 1
     image: {fileID: 21300000, guid: 0dd737a1163782a48897ae3c6d02cc58, type: 3}
   - emote: 3
