@@ -48,7 +48,7 @@ public class GameManager : InputReciever
         else {evalDisplay.sprite = evalSprite[3]; }
     }
 
-    public void NoteHiss() {
+    public void NoteMiss() {
         evalDisplay.sprite = evalSprite[4];
     }
 

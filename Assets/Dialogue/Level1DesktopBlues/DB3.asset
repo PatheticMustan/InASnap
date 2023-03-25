@@ -27,7 +27,7 @@ MonoBehaviour:
     emote: 0
     text: 'There is something I want to try.
 
-      It will be a little more difficult'
+      It''ll be a little more difficult'
     tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
