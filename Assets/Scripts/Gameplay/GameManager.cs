@@ -45,7 +45,7 @@ public class GameManager : InputReciever
         if (Mathf.Abs(eval) < .15) { evalDisplay.sprite = evalSprite[0]; }
         else if (Mathf.Abs(eval) < .4) { evalDisplay.sprite = evalSprite[1]; }
         else if (Mathf.Abs(eval) < .65) { evalDisplay.sprite = evalSprite[2]; }
-        else {evalDisplay.sprite = evalSprite[3]; }
+        else { evalDisplay.sprite = evalSprite[3]; }
     }
 
     public void NoteMiss() {
