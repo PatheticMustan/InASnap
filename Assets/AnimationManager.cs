@@ -18,22 +18,26 @@ public class AnimationManager : MonoBehaviour {
             case InputID.Up:
                 character.SetBool("Jamming", true);
                 character.SetInteger("JammingDirection", 0);
+                character.SetBool("Jazz", false);
                 break;
             case InputID.Down:
                 character.SetBool("Jamming", true);
                 character.SetInteger("JammingDirection", 1);
+                character.SetBool("Jazz", false);
                 break;
             case InputID.Left:
             case InputID.Leftdown:
             case InputID.Leftup:
                 character.SetBool("Jamming", true);
                 character.SetInteger("JammingDirection", 2);
+                character.SetBool("Jazz", false);
                 break;
             case InputID.Right:
             case InputID.Rightdown:
             case InputID.Rightup:
                 character.SetBool("Jamming", true);
                 character.SetInteger("JammingDirection", 3);
+                character.SetBool("Jazz", false);
                 break;
             case InputID.A:
                 character.SetBool("Jazz", true);
