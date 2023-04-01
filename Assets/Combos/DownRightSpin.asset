@@ -31,3 +31,9 @@ MonoBehaviour:
     bufferMoves: 
     minDuration: 0
     maxDuration: 0
+  - type: 0
+    key: 9
+    extraKey: 0
+    bufferMoves: 
+    minDuration: 0
+    maxDuration: 0
