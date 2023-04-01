@@ -26,24 +26,28 @@ public class HealthbarScript : MonoBehaviour {
             healthBar.sizeDelta = new Vector2(initialWidth * ((health-damage) / maxHealth), healthBar.sizeDelta.y);
         }
 
-        if (damage > health || health == 0) {
+        // if it's really small, just add the rest
+        if (damage <= 1) AddDamage(0);
+
+        if ((health-damage) <= 0.05f || health < 0) {
             // call any game-end functions here
             Debug.Log("death is only a temporary hinderance to my unending journey to performing The Final Snap");
 
             // you can set the bar color to a different color, like purple! or play a death animation
             // purple
             // death animation/sprite
+            Time.timeScale = 0;
         }
     }
 
 
-    void AddDamage(float damage) {
+    public void AddDamage(float damage) {
         SetHealth(health - this.damage);
         this.damage = damage;
     }
     
     // sets the HP and updates the healthBar size
-    void SetHealth(float health) {
+    public void SetHealth(float health) {
         this.health = Mathf.Max(health, 0);
         damageBar.sizeDelta = new Vector2(initialWidth * (health / maxHealth), damageBar.sizeDelta.y);
     }
