@@ -35,7 +35,7 @@ public class ComboReader : InputReciever {
         for (int i = 0; i < comboList.list.Length; i++) {
             //Debug.Log("checking " + comboList.list[i].name + "...");
             if (CheckCombo(i)) {
-                Debug.Log("valid combo! " + comboList.list[i].name);
+                ComboPostscript(i);
             }
         }
     }
@@ -62,7 +62,7 @@ public class ComboReader : InputReciever {
 
 
 
-            
+
             if (requiredInputs[i].key != tony[currentInputIndex].inputID) {
                 // the combo is invalid, continue on to the next one
                 return false;
@@ -80,6 +80,10 @@ public class ComboReader : InputReciever {
         }
 
         return true;
+    }
+
+    private void ComboPostscript(int index) {
+        Debug.Log("valid combo! " + comboList.list[index].name + " " + index);
     }
 }
 

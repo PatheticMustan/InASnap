@@ -76,30 +76,26 @@ public class ComboSystem : MonoBehaviour {
             for (int j = 0; j < currentCombo.Length; j++) {
                 Debug.Log("cratsumi");
                 comboNodeList = comboPointer.branches[currentCombo[j].key];
-
-
+            }
         }
 
         //comboRoot.DebugTree("S");
     }
-
-
 }
 
-    // tree made up of ComboNode's, aren't you glad we took [Data Structures H]? 
-    // to traverse down the tree, use root.branches[InputID]
-    public class ComboNode {
-        public Dictionary<InputID, List<ComboNode>> branches = new Dictionary<InputID, List<ComboNode>>();
-        public MoveState moveState;
+// tree made up of ComboNode's, aren't you glad we took [Data Structures H]? 
+// to traverse down the tree, use root.branches[InputID]
+public class ComboNode {
+    public Dictionary<InputID, List<ComboNode>> branches = new Dictionary<InputID, List<ComboNode>>();
+    public MoveState moveState;
 
-        // Animation
-        // Sound
-        // Particle
+    // Animation
+    // Sound
+    // Particle
 
-        public ComboNode() {
-            for (int i = 0; i <= 10; i++) {
-                branches[(InputID)i] = new List<ComboNode>(0);
-            }
+    public ComboNode() {
+        for (int i = 0; i <= 10; i++) {
+            branches[(InputID)i] = new List<ComboNode>(0);
         }
     }
 }
