@@ -21,31 +21,31 @@ MonoBehaviour:
     emote: 1
     text: "That melody is a bop, a new snazzy tune too. Let\u2019s hear the rest
       of it!"
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 0
     emote: 0
     text: "It\u2019s missing something..."
-    tickSpeed: 0.1
+    tickSpeed: 0.05
     hasMaxTime: 0
     maxTime: 0
   - characterID: 0
     emote: 1
     text: It definitely needs some bass
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 1
     emote: 7
     text: "Over a video call? It\u2019s going to be highkey delayed"
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 0
     emote: 1
     text: "It won\u2019t be that bad"
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
   - characterID: 1
@@ -60,6 +60,6 @@ MonoBehaviour:
 
       Press A buttons with
       J!'
-    tickSpeed: 0.05
+    tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0

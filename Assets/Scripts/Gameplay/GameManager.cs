@@ -14,8 +14,13 @@ public class GameManager : InputReciever
     public bool isPlaying;
     public float gameTime;
 
+    public Sprite[] evalSprite;
+    public SpriteRenderer evalDisplay;
+
     public InputID currentKey;
     public UnityEvent<InputID> keyPress;
+
+    public HealthbarScript hpManager;
 
     public void KeyAddListener(UnityAction<InputID> action) {
         if (keyPress == null) {
@@ -37,8 +42,17 @@ public class GameManager : InputReciever
         
     }
 
-    public void NoteHit() {
+    //Forgive me Kevin and Sama
+    public void NoteHit(float eval) {
+        if (Mathf.Abs(eval) < .15) { evalDisplay.sprite = evalSprite[0]; }
+        else if (Mathf.Abs(eval) < .4) { evalDisplay.sprite = evalSprite[1]; }
+        else if (Mathf.Abs(eval) < .65) { evalDisplay.sprite = evalSprite[2]; }
+        else { evalDisplay.sprite = evalSprite[3]; }
+    }
 
+    public void NoteMiss() {
+        evalDisplay.sprite = evalSprite[4];
+        hpManager.AddDamage(250);
     }
 
     // Update is called once per frame

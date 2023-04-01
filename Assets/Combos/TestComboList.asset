@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listName: SpinCombos
   list:
+  - {fileID: 11400000, guid: 567fe394b1495324b9e1e9f7568a0b96, type: 2}
+  - {fileID: 11400000, guid: 9441ffec683380e429a0dd3ad3272d57, type: 2}
   - {fileID: 11400000, guid: 01ce032d1f60af14db80e5da897095ef, type: 2}
   - {fileID: 11400000, guid: 1097f6a8099e0a640bc19dc5300d4fc8, type: 2}
