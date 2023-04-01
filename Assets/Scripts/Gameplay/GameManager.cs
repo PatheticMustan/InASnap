@@ -20,6 +20,8 @@ public class GameManager : InputReciever
     public InputID currentKey;
     public UnityEvent<InputID> keyPress;
 
+    public HealthbarScript hpManager;
+
     public void KeyAddListener(UnityAction<InputID> action) {
         if (keyPress == null) {
             keyPress = new UnityEvent<InputID>();
@@ -50,6 +52,7 @@ public class GameManager : InputReciever
 
     public void NoteMiss() {
         evalDisplay.sprite = evalSprite[4];
+        hpManager.AddDamage(250);
     }
 
     // Update is called once per frame
