@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ComboReader : InputReciever {
     public ComboList comboList;
+
+    public static UnityEvent<int> comboHit;
     public List<TInput> tony { protected get; set; }
     public int maxCoumboLength;
 
     protected new void Awake() {
         base.Awake();
+
+        if (comboHit == null) {
+            comboHit = new UnityEvent<int>();
+        } else {
+            comboHit.RemoveAllListeners();
+        }
+
         tony = new List<TInput>();
         for (int i = 0; i < maxCoumboLength; i++) {
             tony.Add(new TInput(InputID.Neutral, 0));
@@ -84,6 +94,7 @@ public class ComboReader : InputReciever {
 
     private void ComboPostscript(int index) {
         Debug.Log("valid combo! " + comboList.list[index].name + " " + index);
+        comboHit.Invoke(index);
     }
 }
 
