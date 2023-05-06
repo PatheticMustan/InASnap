@@ -18,8 +18,6 @@ public class BeatmapScript : MonoBehaviour {
             beat.transform.SetParent(transform);
             beat.GetComponent<GuitarNote>().Setup(beatInfo.timeValue, beatInfo.key, beatInfo.press);
 
-            Debug.Log(level + ": " + beatInfo.timeValue + ", " + beatInfo.key + " " + beatInfo.key.Equals(InputID.A));
-
             // set sprite
             if ((int)beatInfo.key >= 1 && (int)beatInfo.key <= 8) {
                 // set orientation if it's an arrow
