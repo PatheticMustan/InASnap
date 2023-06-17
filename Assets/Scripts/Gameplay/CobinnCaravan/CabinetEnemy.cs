@@ -16,11 +16,15 @@ public class CabinetEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemy(rightSide, flying);
+        //SpawnEnemy(rightSide, flying);
     }
 
-    public void SpawnEnemy(bool right, bool fly) {
-        transform.position = new Vector3((rightSide ? 1 : -1) * 10f, (fly ? 3 : 0));
+    public void SpawnEnemy(float timer, bool right, bool fly, bool type) {
+        rightSide = right;
+        flying = fly;
+        enemyType = type ? 1 : 0;
+
+        transform.position = new Vector3((rightSide ? 1 : -1) * (timer * speed +1f), (fly ? 3 : 0));
         canMove = true;
     }
 

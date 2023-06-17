@@ -25,9 +25,18 @@ public class GuitarNote : MonoBehaviour {
         this.press = press;
     }
 
+    public void ResetNote() {
+        pressChance = true;
+        gameObject.SetActive(true);
+    }
+
     void FixedUpdate() {
+        
         eval = GameManager.Instance.gameTime - timeValue;
         transform.localPosition = store.NotePosition(eval);
+
+        if (!gameObject.activeSelf)
+            return;
 
         if (!press && GameManager.Instance.currentKey == key && pressChance && eval >= 0f) {
             pressChance = false;
@@ -41,6 +50,9 @@ public class GuitarNote : MonoBehaviour {
     }
 
     public void PressNote(InputID id) {
+        if (!gameObject.activeSelf)
+            return;
+
         if (press && pressChance) {
             eval = GameManager.Instance.gameTime - timeValue;
             if (id == key && Mathf.Abs(eval) <= .2f) {

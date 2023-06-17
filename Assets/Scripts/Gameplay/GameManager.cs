@@ -45,9 +45,9 @@ public class GameManager : InputReciever
     //Forgive me Kevin and Sama
     public void NoteHit(float eval) {
         if (Mathf.Abs(eval) < .15) { evalDisplay.sprite = evalSprite[0]; }
-        else if (Mathf.Abs(eval) < .4) { evalDisplay.sprite = evalSprite[1]; }
-        else if (Mathf.Abs(eval) < .65) { evalDisplay.sprite = evalSprite[2]; }
-        else { evalDisplay.sprite = evalSprite[3]; }
+        else if (Mathf.Abs(eval) < .35) { evalDisplay.sprite = evalSprite[1]; }
+        else if (Mathf.Abs(eval) < .5) { evalDisplay.sprite = evalSprite[2]; }
+        else { evalDisplay.sprite = evalSprite[3]; hpManager.AddDamage(100); }
     }
 
     public void NoteMiss() {

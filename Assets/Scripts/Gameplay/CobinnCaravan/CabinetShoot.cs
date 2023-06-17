@@ -7,6 +7,8 @@ public class CabinetShoot : MonoBehaviour
     public ParticleSystem fireball;
     public ParticleSystem hammer;
 
+    public bool isRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class CabinetShoot : MonoBehaviour
     }
 
     public void Shoot(int id) {
-        
+        if (id % 2 == (isRight ? 0 : 1))
         switch (id) {
             case 0:
             case 1:

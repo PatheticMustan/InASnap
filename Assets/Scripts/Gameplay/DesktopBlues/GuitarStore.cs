@@ -5,10 +5,12 @@ using UnityEngine;
 public class GuitarStore : MonoBehaviour
 {
     public GameObject hitSquare;
+    public HealthbarScript health;
 
     public DialogueReader reader;
     public float[] length;
     public Dialogue[] dialogues;
+    public Dialogue[] randomDeath;
     public GameObject[] levelStore;
 
     public Dialogue dialogueEnd;
@@ -28,6 +30,8 @@ public class GuitarStore : MonoBehaviour
     {
         StartLevel(0);
         levelPos = 0;
+
+        
     }
 
     // Update is called once per frame
@@ -45,25 +49,41 @@ public class GuitarStore : MonoBehaviour
             } else {
                 levelPos++;
                 StartLevel(levelPos);
+                health.ResetHealth();
             }
             
         }
     }
 
     public Vector3 NotePosition(float eval) {
-        return eval * 4f * Vector3.left;
+        return eval * 8f * Vector3.left;
     }
 
-    public void StartLevel(int id) {
+    public void SetUpLevel(int id) {
         for (int i = 0; i < dialogues.Length; i++) {
             levelStore[i].SetActive(id == i);
+            if (id == i) {
+                for (int j = 0; j < levelStore[i].transform.childCount; j++) {
+                    levelStore[i].transform.GetChild(j).GetComponent<GuitarNote>().ResetNote();
+                }
+            }
         }
 
         levelPos = id;
         GameManager.Instance.gameTime = 0;
         GameManager.Instance.isPlaying = false;
+    }
+
+    public void StartLevel(int id) {
+        SetUpLevel(id);
 
         reader.ReadDialogue(dialogues[id]);
+    }
+
+    public void Retry() {
+        SetUpLevel(levelPos);
+
+        reader.ReadDialogue(randomDeath[Random.Range(0,randomDeath.Length)]);
     }
 
     public void PlayGuitar(InputID id, bool isPass) {

@@ -17,6 +17,7 @@ public class TestHurt : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.GetComponent<CabinetEnemy>() )
         collision.GetComponent<CabinetEnemy>().Damage(0);
     }
 }

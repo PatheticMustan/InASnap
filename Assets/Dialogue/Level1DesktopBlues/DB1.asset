@@ -38,7 +38,7 @@ MonoBehaviour:
     maxTime: 0
   - characterID: 1
     emote: 7
-    text: "Over a video call? It\u2019s going to be highkey delayed"
+    text: "Over a video call? It\u2019s going to be highkey delayed :o"
     tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0
@@ -58,8 +58,8 @@ MonoBehaviour:
     emote: 0
     text: 'Press the direction of the arrows with WASD!
 
-      Press A buttons with
-      J!'
+      Press J to click the
+      Circles!'
     tickSpeed: 0.02
     hasMaxTime: 0
     maxTime: 0

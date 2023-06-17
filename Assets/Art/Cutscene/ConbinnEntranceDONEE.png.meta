@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: e1dc2aaf949357e488fa30f0f743bc7e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6554342646354746574
+    second: ConbinnEntranceDONEE_0
+  - first:
+      213: 5022630788041910416
+    second: ConbinnEntranceDONEE_1
+  - first:
+      213: 3416581236361763381
+    second: ConbinnEntranceDONEE_2
+  - first:
+      213: -4917403254646640342
+    second: ConbinnEntranceDONEE_3
+  - first:
+      213: -3871079058753279007
+    second: ConbinnEntranceDONEE_4
+  - first:
+      213: -3275768732951532215
+    second: ConbinnEntranceDONEE_5
+  - first:
+      213: -2832207069186959073
+    second: ConbinnEntranceDONEE_6
+  - first:
+      213: -5014275386491802644
+    second: ConbinnEntranceDONEE_7
+  - first:
+      213: 6506401363251378006
+    second: ConbinnEntranceDONEE_8
+  - first:
+      213: 7911790088036234332
+    second: ConbinnEntranceDONEE_9
+  - first:
+      213: -1688362286036729952
+    second: ConbinnEntranceDONEE_10
+  - first:
+      213: 6272511938382272714
+    second: ConbinnEntranceDONEE_11
+  - first:
+      213: 174025429720894217
+    second: ConbinnEntranceDONEE_12
+  - first:
+      213: 789216692918672275
+    second: ConbinnEntranceDONEE_13
+  - first:
+      213: -8380090522786120844
+    second: ConbinnEntranceDONEE_14
+  - first:
+      213: -8136044686534451928
+    second: ConbinnEntranceDONEE_15
+  - first:
+      213: 6133246014408478720
+    second: ConbinnEntranceDONEE_16
+  - first:
+      213: -8212146657664226950
+    second: ConbinnEntranceDONEE_17
+  - first:
+      213: 3250888033808219646
+    second: ConbinnEntranceDONEE_18
+  - first:
+      213: 7852633144676013436
+    second: ConbinnEntranceDONEE_19
+  - first:
+      213: 1174783663367776664
+    second: ConbinnEntranceDONEE_20
+  - first:
+      213: -718723511440653824
+    second: ConbinnEntranceDONEE_21
+  - first:
+      213: 6373789653534696259
+    second: ConbinnEntranceDONEE_22
+  - first:
+      213: -6308314089170280295
+    second: ConbinnEntranceDONEE_23
+  - first:
+      213: -7530100218311699062
+    second: ConbinnEntranceDONEE_24
+  - first:
+      213: -4473129156795504140
+    second: ConbinnEntranceDONEE_25
+  - first:
+      213: -8308450807784521048
+    second: ConbinnEntranceDONEE_26
+  - first:
+      213: -3960037583865206520
+    second: ConbinnEntranceDONEE_27
+  - first:
+      213: -7036770692572767457
+    second: ConbinnEntranceDONEE_28
+  - first:
+      213: 5132462569755392096
+    second: ConbinnEntranceDONEE_29
+  - first:
+      213: 8727736104825444594
+    second: ConbinnEntranceDONEE_30
+  - first:
+      213: 7700003839262442728
+    second: ConbinnEntranceDONEE_31
+  - first:
+      213: 8900059761220705307
+    second: ConbinnEntranceDONEE_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233e4dbe61c4a05a0800000000000000
+      internalID: -6554342646354746574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_1
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098ad273718f3b540800000000000000
+      internalID: 5022630788041910416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_2
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a9b9b58822a6f20800000000000000
+      internalID: 3416581236361763381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_3
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21ff6d1bcfd1cbb0800000000000000
+      internalID: -4917403254646640342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_4
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebae8d1b1a274ac0800000000000000
+      internalID: -3871079058753279007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_5
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 620
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94da71271b12a82d0800000000000000
+      internalID: -3275768732951532215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19d2ce1daaf1b8d0800000000000000
+      internalID: -2832207069186959073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebeb2e4a17b96ab0800000000000000
+      internalID: -5014275386491802644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65737b641916b4a50800000000000000
+      internalID: 6506401363251378006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c543bd6aa235ccd60800000000000000
+      internalID: 7911790088036234332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_10
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af3d98327bb198e0800000000000000
+      internalID: -1688362286036729952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_11
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 496
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac81ca0ff507c0750800000000000000
+      internalID: 6272511938382272714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b0660d4334a6200800000000000000
+      internalID: 174025429720894217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_13
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bd938966cd3fa00800000000000000
+      internalID: 789216692918672275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_14
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b37b3b110f3bb80800000000000000
+      internalID: -8380090522786120844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_15
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd866d676f61f80800000000000000
+      internalID: -8136044686534451928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_16
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000d5e831caad1550800000000000000
+      internalID: 6133246014408478720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_17
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 372
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79238aef18980e80800000000000000
+      internalID: -8212146657664226950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efdf4bb51797d1d20800000000000000
+      internalID: 3250888033808219646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c755fd37d382afc60800000000000000
+      internalID: 7852633144676013436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_20
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899e7fe748bad4010800000000000000
+      internalID: 1174783663367776664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_21
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002cbd836c49606f0800000000000000
+      internalID: -718723511440653824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_22
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343eefb8bef347850800000000000000
+      internalID: 6373789653534696259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_23
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 248
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990e96f32cd5478a0800000000000000
+      internalID: -6308314089170280295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8590746fb5bf7790800000000000000
+      internalID: -7530100218311699062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_25
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9e2c64bb04ce1c0800000000000000
+      internalID: -4473129156795504140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_26
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a24238a20472bc80800000000000000
+      internalID: -8308450807784521048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_27
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809a4847cce1b09c0800000000000000
+      internalID: -3960037583865206520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_28
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b1257665e585e90800000000000000
+      internalID: -7036770692572767457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_29
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 124
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0683245a38b2a3740800000000000000
+      internalID: 5132462569755392096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8d87deeb52f1970800000000000000
+      internalID: 8727736104825444594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_31
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4c16802b8ebda60800000000000000
+      internalID: 7700003839262442728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConbinnEntranceDONEE_32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 196
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cde43c23d538b70800000000000000
+      internalID: 8900059761220705307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
